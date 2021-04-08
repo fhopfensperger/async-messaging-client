@@ -37,7 +37,7 @@ var queueCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(queueCmd)
+	sbCmd.AddCommand(queueCmd)
 
 	// Here you will define your flags and configuration settings.
 

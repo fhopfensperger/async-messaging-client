@@ -73,7 +73,7 @@ It can also listen on several queues simultaneously.`,
 }
 
 func init() {
-	rootCmd.AddCommand(receiveCmd)
+	sbCmd.AddCommand(receiveCmd)
 
 	// Here you will define your flags and configuration settings.
 

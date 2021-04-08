@@ -52,7 +52,7 @@ var sendCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(sendCmd)
+	sbCmd.AddCommand(sendCmd)
 
 	// Here you will define your flags and configuration settings.
 

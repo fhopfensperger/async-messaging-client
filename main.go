@@ -17,6 +17,7 @@ package main
 
 import (
 	"os"
+	"runtime"
 	"time"
 
 	"github.com/fhopfensperger/async-messaging-client/cmd"
@@ -36,4 +37,7 @@ func main() {
 
 func setupLogger() {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stdout, TimeFormat: time.RFC3339})
+	if runtime.GOOS == "windows" {
+		log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stdout, TimeFormat: time.RFC3339, NoColor: true})
+	}
 }

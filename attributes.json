@@ -1,0 +1,5 @@
+{
+  "eventType": "this.is.a.sample.event.type",
+  "dispatcherId": "this.is.a.sample.id",
+  "schemaVersion": "v1"
+}

@@ -37,7 +37,7 @@ var cancelCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(cancelCmd)
+	sbCmd.AddCommand(cancelCmd)
 
 }
 

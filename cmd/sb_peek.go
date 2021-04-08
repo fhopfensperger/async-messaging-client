@@ -37,7 +37,7 @@ var peekCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(peekCmd)
+	sbCmd.AddCommand(peekCmd)
 
 }
 

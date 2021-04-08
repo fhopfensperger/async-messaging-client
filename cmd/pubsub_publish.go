@@ -48,10 +48,13 @@ var publishCmd = &cobra.Command{
 			return
 		}
 		attributesFile := viper.GetString("attributes")
-		attributes, err := transformAttributes(attributesFile)
-		if err != nil {
-			log.Err(err).Msg("")
-			return
+		attributes := make(map[string]string)
+		if attributesFile != "" {
+			attributes, err = transformAttributes(attributesFile)
+			if err != nil {
+				log.Err(err).Msg("")
+				return
+			}
 		}
 
 		log.Info().Msgf("Trying to send message: \n%s\nwith attributes: %#v\nto topic: %v for project: %v", message, attributes, pubSubTopic, gcpProject)

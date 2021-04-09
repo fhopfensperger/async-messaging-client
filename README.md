@@ -145,6 +145,40 @@ $ async-messaging-client pubsub subscribe -p google-project-id -s test-sub
     ]
   }
 }, from projects/google-project-id/subscriptions/test-sub with attributes map[string]string{"dispatcherId":"this.is.a.sample.id", "eventType":"this.is.a.sample.event.type", "schemaVersion":"v1"} with message id 2258869234167928
+```
 
- 
+---
+### Azure Service Bus
+
+```json
+# Content of test.json
+{ "key1": "value1", "key2": "value2", "message" }
+```
+##### **Sending**
+```bash
+async-messaging-client sb send -f test.json -q myQueueName -c "Endpoint=sb://host.servicebus.windows.net/;SharedAccessKeyName=..."
+```
+##### **Receiving one message**
+```bash
+async-messaging-client sb receive -q myQueueName -c "Endpoint=sb://host.servicebus.windows.net/;SharedAccessKeyName=..."
+```
+
+##### **Receiving for a specific duration**
+```bash
+async-messaging-client sb receive -d 10m -q myQueueName -c "Endpoint=sb://host.servicebus.windows.net/;SharedAccessKeyName=..."
+```
+
+### Option 2 (using environment variables)
+##### **Setting environment variables**
+```bash
+export CONNECTION_STRING='Endpoint=sb:...'
+export QUEUE="myQueueName"
+```
+##### **Sending**
+```bash
+async-messaging-client sb send -f test.json 
+```
+##### **Receiving**
+```bash
+async-messaging-client sb receive -d 1h
 ```

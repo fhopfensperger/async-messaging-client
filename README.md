@@ -2,6 +2,7 @@
 ![Go](https://github.com/fhopfensperger/async-messaging-client/workflows/Go/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/fhopfensperger/async-messaging-client)](https://goreportcard.com/report/github.com/fhopfensperger/async-messaging-client)
 [![Release](https://img.shields.io/github/release/fhopfensperger/async-messaging-client.svg?style=flat-square)](https://github.com/fhopfensperger/async-messaging-client/releases/latest)
+[![Docker Repository on Quay](https://img.shields.io/badge/Quay-repository-sucess "Docker Repository on Quay")](https://quay.io/repository/fhopfensperger/async-messaging-client)
 
 
 Sends and receives messages in an asynchronous way to / from different Cloud messaging services.

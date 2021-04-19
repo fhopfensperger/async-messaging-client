@@ -1,5 +1,7 @@
 builds:
-  - # GOOS list to build for.
+  - env:
+      - CGO_ENABLED=0
+    # GOOS list to build for.
     # For more info refer to: https://golang.org/doc/install/source#environment
     # Defaults are darwin and linux.
     goos:

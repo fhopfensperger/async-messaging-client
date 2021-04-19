@@ -34,6 +34,17 @@ sudo mv async-messaging-client /usr/local/bin/
 3. Use [7-Zip](https://www.7-zip.org/) or your favourite file archiver to unpack the archive
 4. *Optional* Add the `async-messaging-client.exe` in to your `PATH`
 
+### Run as container
+
+Besides installing the binary on the local computer, you have the option to run the program as a container
+```bash
+# Sending a string message 
+docker run -it -rm quay.io/fhopfensperger/async-messaging-client sb send -q myQueueName -c "Endpoint..." hello
+# Sending a json file
+docker run -it --rm -v $(pwd)/test.json:/app/test.json quay.io/fhopfensperger/async-messaging-client sb send -f test.json -q myQueueName -c "Endpoint..."
+# Define environment variable
+docker run -it --rm -e QUEUE=myQueueName quay.io/fhopfensperger/async-messaging-client sb receive -c "Endpoint..."
+```
 
 ## Usage Examples:
 

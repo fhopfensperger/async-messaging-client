@@ -13,13 +13,20 @@ Currently, the following Cloud services are supported:
 
 ## Installation
 ### Linux / Mac OS
-#### Option 1 (script)
+
+### Homebrew
+
+```bash
+brew install fhopfensperger/tap/async-messaging-client
+```
+
+#### Script
 
 ```bash
 curl https://raw.githubusercontent.com/fhopfensperger/async-messaging-client/main/get.sh | bash
 ```
 
-#### Option 2 (manually)
+#### Manually
 
 Go to [Releases](https://github.com/fhopfensperger/async-messaging-client/releases) download the latest release according to your processor architecture and operating system, then unzip and copy it to the right location
 

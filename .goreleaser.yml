@@ -16,3 +16,21 @@ builds:
       - amd64
       - arm
       - arm64
+
+brews:
+  - tap:
+      owner: fhopfensperger
+      name: homebrew-tap
+    folder: Formula
+    homepage: https://fhopfensperger.github.io
+    description: Sends and receives messages in an asynchronous way to or from different Cloud messaging services.
+    license: Apache 2.0
+    test: |
+      system "#{bin}/async-messaging-client -v"
+    dependencies:
+      - name: go
+        type: optional
+      - name: git
+        type: optional
+    install: |-
+      bin.install "async-messaging-client"

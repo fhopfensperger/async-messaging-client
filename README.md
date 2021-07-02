@@ -38,9 +38,9 @@ sudo mv async-messaging-client /usr/local/bin/
 ```
 ### Windows
 1. Go to [Releases](https://github.com/fhopfensperger/async-messaging-client/releases)
-2. Download the latest release async-messaging-client_x.x.x_windows_amd64.tar.gz
-3. Use [7-Zip](https://www.7-zip.org/) or your favourite file archiver to unpack the archive
-4. *Optional* Add the `async-messaging-client.exe` in to your `PATH`
+2. Download the latest release async-messaging-client_x.x.x_windows_amd64.zip
+3. Use your favourite file archiver to unpack the archive
+4. *Optional* Add the `async-messaging-client.exe` to your `PATH`
 
 ### Run as container
 

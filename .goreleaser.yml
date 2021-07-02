@@ -1,3 +1,7 @@
+before:
+  hooks:
+    - go mod tidy
+    - ./scripts/completions.sh
 builds:
   - env:
       - CGO_ENABLED=0
@@ -34,3 +38,15 @@ brews:
         type: optional
     install: |-
       bin.install "async-messaging-client"
+      bash_completion.install "completions/async-messaging-client.bash" => "async-messaging-client"
+      zsh_completion.install "completions/async-messaging-client.zsh" => "_async-messaging-client"
+      fish_completion.install "completions/async-messaging-client.fish"
+archives:
+  - name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - README.md
+      - LICENSE
+      - completions/*

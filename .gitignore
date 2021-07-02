@@ -5,6 +5,7 @@
 *.so
 *.dylib
 async-messaging-client
+completions/
 
 # Test binary, built with `go test -c`
 *.test

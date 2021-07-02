@@ -59,6 +59,10 @@ var publishCmd = &cobra.Command{
 
 		log.Info().Msgf("Trying to send message: \n%s\nwith attributes: %#v\nto topic: %v for project: %v", message, attributes, pubSubTopic, gcpProject)
 		err = publish(message, attributes, pubSubTopic, gcpProject)
+		if err != nil {
+			log.Err(err).Msg("")
+			return
+		}
 	},
 }
 

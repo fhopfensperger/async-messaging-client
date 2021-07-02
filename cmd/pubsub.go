@@ -28,7 +28,6 @@ import (
 
 var pubSubTopic string
 var gcpProject string
-var gcpApiKey string
 
 var pubSubUsage = `Interact with Google Cloud Pub/Sub`
 

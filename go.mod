@@ -3,7 +3,7 @@ module github.com/fhopfensperger/async-messaging-client
 go 1.16
 
 require (
-	cloud.google.com/go/pubsub v1.19.0
+	cloud.google.com/go/pubsub v1.20.0
 	github.com/Azure/azure-service-bus-go v0.11.5
 	github.com/census-instrumentation/opencensus-proto v0.3.0 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect

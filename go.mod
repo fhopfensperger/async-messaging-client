@@ -6,7 +6,7 @@ require (
 	cloud.google.com/go/pubsub v1.25.1
 	github.com/Azure/azure-service-bus-go v0.11.5
 	github.com/pkg/errors v0.9.1
-	github.com/rs/zerolog v1.27.0
+	github.com/rs/zerolog v1.28.0
 	github.com/spf13/cobra v1.6.0
 	github.com/spf13/viper v1.13.0
 )

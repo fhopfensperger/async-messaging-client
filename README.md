@@ -2,7 +2,6 @@
 ![Go](https://github.com/fhopfensperger/async-messaging-client/workflows/Go/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/fhopfensperger/async-messaging-client)](https://goreportcard.com/report/github.com/fhopfensperger/async-messaging-client)
 [![Release](https://img.shields.io/github/release/fhopfensperger/async-messaging-client.svg?style=flat-square)](https://github.com/fhopfensperger/async-messaging-client/releases/latest)
-[![Docker Repository on Quay](https://img.shields.io/badge/Quay-repository-sucess "Docker Repository on Quay")](https://quay.io/repository/fhopfensperger/async-messaging-client)
 
 
 Sends and receives messages in an asynchronous way to / from different Cloud messaging services.
@@ -47,11 +46,11 @@ sudo mv async-messaging-client /usr/local/bin/
 Besides installing the binary on the local computer, you have the option to run the program as a container
 ```bash
 # Sending a string message 
-docker run -it -rm quay.io/fhopfensperger/async-messaging-client sb send -q myQueueName -c "Endpoint..." hello
+docker run -it -rm ghcr.io/fhopfensperger/async-messaging-client sb send -q myQueueName -c "Endpoint..." hello
 # Sending a json file
-docker run -it --rm -v $(pwd)/test.json:/app/test.json quay.io/fhopfensperger/async-messaging-client sb send -f test.json -q myQueueName -c "Endpoint..."
+docker run -it --rm -v $(pwd)/test.json:/app/test.json ghcr.io/fhopfensperger/async-messaging-client sb send -f test.json -q myQueueName -c "Endpoint..."
 # Define environment variable
-docker run -it --rm -e QUEUE=myQueueName quay.io/fhopfensperger/async-messaging-client sb receive -c "Endpoint..."
+docker run -it --rm -e QUEUE=myQueueName ghcr.io/fhopfensperger/async-messaging-client sb receive -c "Endpoint..."
 ```
 
 ## Usage Examples:

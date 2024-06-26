@@ -6,7 +6,7 @@ COPY . .
 ARG BUILD_VERSION="0.0.0"
 RUN CGO_ENABLED=0 go build -a -ldflags "-X main.version=$BUILD_VERSION" -o async-messaging-client .
 
-FROM alpine:3.20.0
+FROM alpine:3.20.1
 
 LABEL maintainer="Florian Hopfensperger <f.hopfensperger@gmail.com>"
 

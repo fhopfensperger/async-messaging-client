@@ -1,3 +1,4 @@
+version: 2
 before:
   hooks:
     - go mod tidy
@@ -22,10 +23,11 @@ builds:
       - arm64
 
 brews:
-  - tap:
+  - name: async-messaging-client
+    repository:
       owner: fhopfensperger
       name: homebrew-tap
-    folder: Formula
+    directory: Formula
     homepage: https://fhopfensperger.github.io
     description: Sends and receives messages in an asynchronous way to or from different Cloud messaging services.
     license: Apache 2.0

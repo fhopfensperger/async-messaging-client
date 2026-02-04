@@ -2,7 +2,7 @@ module github.com/fhopfensperger/async-messaging-client
 
 go 1.22.7
 
-toolchain go1.24.0
+toolchain go1.25.7
 
 require (
 	cloud.google.com/go/pubsub v1.47.0
